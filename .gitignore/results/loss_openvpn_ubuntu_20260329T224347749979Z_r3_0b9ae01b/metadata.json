@@ -1,0 +1,23 @@
+{
+  "run_id": "loss_openvpn_ubuntu_20260329T224347749979Z_r3_0b9ae01b",
+  "stage": "loss",
+  "timestamp_utc": "20260329T224925777993Z",
+  "host": "ubuntu",
+  "vpn": "openvpn",
+  "server_ip": "10.20.0.1",
+  "duration_sec": 60,
+  "ping_count": 50,
+  "udp_bandwidth": "50M",
+  "iface": "enp0s3",
+  "delay_ms": null,
+  "loss_pct": 1.0,
+  "mtu": 1500,
+  "repeat": "3",
+  "cpu_stress": false,
+  "capture": true,
+  "start_vpn": true,
+  "stop_vpn": true,
+  "measure_handshake": true,
+  "measure_reconnect": false,
+  "client_conf": "/home/clientvm/vm-client.ovpn"
+}

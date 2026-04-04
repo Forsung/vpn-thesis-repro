@@ -1,0 +1,23 @@
+{
+  "run_id": "loss_ipsec_ubuntu_20260329T222455862717Z_r1_3b2e5091",
+  "stage": "loss",
+  "timestamp_utc": "20260329T222815273744Z",
+  "host": "ubuntu",
+  "vpn": "ipsec",
+  "server_ip": "192.168.1.175",
+  "duration_sec": 60,
+  "ping_count": 50,
+  "udp_bandwidth": "50M",
+  "iface": "enp0s3",
+  "delay_ms": null,
+  "loss_pct": 1.0,
+  "mtu": 1500,
+  "repeat": "1",
+  "cpu_stress": false,
+  "capture": true,
+  "start_vpn": true,
+  "stop_vpn": true,
+  "measure_handshake": true,
+  "measure_reconnect": false,
+  "client_conf": null
+}

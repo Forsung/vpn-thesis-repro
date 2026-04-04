@@ -1,0 +1,8 @@
+pi-clie+    7114  0.0  0.7  21760 13628 pts/0    S+   19:39   0:00 python3 /home/pi-client/vpn-thesis/scripts/test_system.py --stage loss --vpn openvpn --server-ip 10.20.0.1 --iface eth0 --duration 60 --ping-count 50 --udp-bandwidth 50M --start-vpn --stop-vpn --clear-netem --measure-handshake --client-conf /home/pi-client/pi-client.ovpn --loss 1 --mtu 1500 --capture --repeat-id 1
+pi-clie+    7131  0.0  0.0   2328   832 pts/0    S+   19:39   0:00 /bin/sh -c sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/loss_openvpn_ubuntu_20260329T193901693987Z_r1_1ccf5d57/capture.pcap
+root        7133  0.0  0.2  13400  4592 pts/0    S+   19:39   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/loss_openvpn_ubuntu_20260329T193901693987Z_r1_1ccf5d57/capture.pcap
+root        7140  0.0  0.0  13400  1808 pts/3    Ss   19:39   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/loss_openvpn_ubuntu_20260329T193901693987Z_r1_1ccf5d57/capture.pcap
+tcpdump     7141  0.9  0.3  16228  7256 pts/3    S+   19:39   0:03 tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/loss_openvpn_ubuntu_20260329T193901693987Z_r1_1ccf5d57/capture.pcap
+root        7172  0.4  0.2  13400  4592 pts/0    S+   19:44   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
+root        7174  0.0  0.0  13400   680 pts/4    Ss   19:44   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
+root        7175  0.6  0.4  12632  8020 pts/4    S+   19:44   0:00 openvpn --config /home/pi-client/pi-client.ovpn

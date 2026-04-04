@@ -1,0 +1,23 @@
+{
+  "run_id": "baseline_wireguard_ubuntu_20260328T002930742143Z_r1_8c684370",
+  "stage": "baseline",
+  "timestamp_utc": "20260328T003242898272Z",
+  "host": "ubuntu",
+  "vpn": "wireguard",
+  "server_ip": "10.10.0.1",
+  "duration_sec": 60,
+  "ping_count": 50,
+  "udp_bandwidth": "50M",
+  "iface": "enp0s3",
+  "delay_ms": null,
+  "loss_pct": null,
+  "mtu": 1500,
+  "repeat": "1",
+  "cpu_stress": false,
+  "capture": true,
+  "start_vpn": true,
+  "stop_vpn": true,
+  "measure_handshake": true,
+  "measure_reconnect": false,
+  "client_conf": null
+}

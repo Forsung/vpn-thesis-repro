@@ -1,0 +1,14 @@
+root        9509  0.0  0.2  13400  4576 pts/0    S+   10:43   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T104352421149Z_r1_2f8980e3/capture.pcap
+root        9516  0.0  0.0  13400   676 pts/3    Ss   10:43   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T104352421149Z_r1_2f8980e3/capture.pcap
+tcpdump     9517  2.4  0.3  16228  7008 pts/3    S+   10:43   0:33 tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T104352421149Z_r1_2f8980e3/capture.pcap
+root        9854  0.0  0.2  13400  4580 pts/0    S+   10:52   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T105239229676Z_r2_48a69592/capture.pcap
+root        9861  0.0  0.0  13400  1804 pts/5    Ss   10:52   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T105239229676Z_r2_48a69592/capture.pcap
+tcpdump     9862  2.1  0.3  16228  7220 pts/5    S+   10:52   0:18 tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T105239229676Z_r2_48a69592/capture.pcap
+pi-clie+   10151  0.0  0.7  21824 13532 pts/0    S+   11:01   0:00 python3 /home/pi-client/vpn-thesis/scripts/test_system.py --stage mtu --vpn openvpn --server-ip 10.20.0.1 --iface eth0 --duration 60 --ping-count 50 --udp-bandwidth 50M --start-vpn --stop-vpn --clear-netem --measure-handshake --client-conf /home/pi-client/pi-client.ovpn --mtu 1400 --capture --repeat-id 3
+pi-clie+   10164  0.0  0.0   2328   832 pts/0    S+   11:01   0:00 /bin/sh -c sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T110129806355Z_r3_cad7550d/capture.pcap
+root       10166  0.0  0.2  13400  4576 pts/0    S+   11:01   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T110129806355Z_r3_cad7550d/capture.pcap
+root       10173  0.0  0.0  13400   676 pts/7    Ss   11:01   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T110129806355Z_r3_cad7550d/capture.pcap
+tcpdump    10174  1.6  0.3  16228  7248 pts/7    S+   11:01   0:05 tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T110129806355Z_r3_cad7550d/capture.pcap
+root       10200  0.4  0.2  13400  4556 pts/0    S+   11:07   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
+root       10202  0.0  0.0  13400   680 pts/8    Ss   11:07   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
+root       10203  0.6  0.4  12632  7984 pts/8    S+   11:07   0:00 openvpn --config /home/pi-client/pi-client.ovpn

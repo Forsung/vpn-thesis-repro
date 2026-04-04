@@ -1,0 +1,23 @@
+{
+  "run_id": "mtu_wireguard_ubuntu_20260330T104926437701Z_r2_87c85a87",
+  "stage": "mtu",
+  "timestamp_utc": "20260330T105238437476Z",
+  "host": "ubuntu",
+  "vpn": "wireguard",
+  "server_ip": "10.10.0.1",
+  "duration_sec": 60,
+  "ping_count": 50,
+  "udp_bandwidth": "50M",
+  "iface": "eth0",
+  "delay_ms": null,
+  "loss_pct": null,
+  "mtu": 1400,
+  "repeat": "2",
+  "cpu_stress": false,
+  "capture": true,
+  "start_vpn": true,
+  "stop_vpn": true,
+  "measure_handshake": true,
+  "measure_reconnect": false,
+  "client_conf": null
+}

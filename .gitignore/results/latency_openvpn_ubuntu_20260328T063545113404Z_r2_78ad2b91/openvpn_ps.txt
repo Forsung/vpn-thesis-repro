@@ -1,0 +1,11 @@
+root       30286  0.0  0.2  11500  5660 pts/0    S+   06:23   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/latency_openvpn_ubuntu_20260328T062338037654Z_r1_5a69743e/capture.pcap
+root       30290  0.0  0.0  11500   880 pts/3    Ss   06:23   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/latency_openvpn_ubuntu_20260328T062338037654Z_r1_5a69743e/capture.pcap
+tcpdump    30292  1.0  0.4  16476  8052 pts/3    S+   06:23   0:10 tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/latency_openvpn_ubuntu_20260328T062338037654Z_r1_5a69743e/capture.pcap
+clientvm   30754  0.0  0.7  21812 14804 pts/0    S+   06:35   0:00 python3 /home/clientvm/vpn-thesis/scripts/test_system.py --stage latency --vpn openvpn --server-ip 10.20.0.1 --iface enp0s3 --duration 60 --ping-count 50 --udp-bandwidth 50M --start-vpn --stop-vpn --clear-netem --measure-handshake --client-conf /home/clientvm/vm-client.ovpn --delay 50 --mtu 1500 --capture --repeat-id 2
+clientvm   30773  0.0  0.0   2892   984 pts/0    S+   06:35   0:00 /bin/sh -c sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/latency_openvpn_ubuntu_20260328T063545113404Z_r2_78ad2b91/capture.pcap
+root       30775  0.0  0.2  11500  5684 pts/0    S+   06:35   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/latency_openvpn_ubuntu_20260328T063545113404Z_r2_78ad2b91/capture.pcap
+root       30780  0.0  0.0  11500   880 pts/6    Ss   06:35   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/latency_openvpn_ubuntu_20260328T063545113404Z_r2_78ad2b91/capture.pcap
+tcpdump    30781  0.8  0.4  16476  8048 pts/6    S+   06:35   0:02 tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/latency_openvpn_ubuntu_20260328T063545113404Z_r2_78ad2b91/capture.pcap
+root       30809  0.2  0.2  11504  5628 pts/0    S+   06:41   0:00 sudo openvpn --config /home/clientvm/vm-client.ovpn
+root       30811  0.0  0.0  11504   884 pts/5    Ss   06:41   0:00 sudo openvpn --config /home/clientvm/vm-client.ovpn
+root       30812  0.4  0.4  13508  8948 pts/5    S+   06:41   0:00 openvpn --config /home/clientvm/vm-client.ovpn

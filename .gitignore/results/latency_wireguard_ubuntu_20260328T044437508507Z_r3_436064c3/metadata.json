@@ -1,0 +1,23 @@
+{
+  "run_id": "latency_wireguard_ubuntu_20260328T044437508507Z_r3_436064c3",
+  "stage": "latency",
+  "timestamp_utc": "20260328T044803325057Z",
+  "host": "ubuntu",
+  "vpn": "wireguard",
+  "server_ip": "10.10.0.1",
+  "duration_sec": 60,
+  "ping_count": 50,
+  "udp_bandwidth": "50M",
+  "iface": "eth0",
+  "delay_ms": 50,
+  "loss_pct": null,
+  "mtu": 1500,
+  "repeat": "3",
+  "cpu_stress": false,
+  "capture": true,
+  "start_vpn": true,
+  "stop_vpn": true,
+  "measure_handshake": true,
+  "measure_reconnect": false,
+  "client_conf": null
+}

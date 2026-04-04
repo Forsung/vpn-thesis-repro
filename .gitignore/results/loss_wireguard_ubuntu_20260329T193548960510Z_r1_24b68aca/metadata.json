@@ -1,0 +1,23 @@
+{
+  "run_id": "loss_wireguard_ubuntu_20260329T193548960510Z_r1_24b68aca",
+  "stage": "loss",
+  "timestamp_utc": "20260329T193900895885Z",
+  "host": "ubuntu",
+  "vpn": "wireguard",
+  "server_ip": "10.10.0.1",
+  "duration_sec": 60,
+  "ping_count": 50,
+  "udp_bandwidth": "50M",
+  "iface": "eth0",
+  "delay_ms": null,
+  "loss_pct": 1.0,
+  "mtu": 1500,
+  "repeat": "1",
+  "cpu_stress": false,
+  "capture": true,
+  "start_vpn": true,
+  "stop_vpn": true,
+  "measure_handshake": true,
+  "measure_reconnect": false,
+  "client_conf": null
+}

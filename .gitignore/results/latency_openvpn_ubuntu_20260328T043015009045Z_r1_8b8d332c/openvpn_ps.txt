@@ -1,0 +1,8 @@
+pi-clie+    3108  0.0  0.7  21820 13544 pts/0    S+   04:30   0:00 python3 /home/pi-client/vpn-thesis/scripts/test_system.py --stage latency --vpn openvpn --server-ip 10.20.0.1 --iface eth0 --duration 60 --ping-count 50 --udp-bandwidth 50M --start-vpn --stop-vpn --clear-netem --measure-handshake --client-conf /home/pi-client/pi-client.ovpn --delay 50 --mtu 1500 --capture --repeat-id 1
+pi-clie+    3125  0.0  0.0   2328   832 pts/0    S+   04:30   0:00 /bin/sh -c sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/latency_openvpn_ubuntu_20260328T043015009045Z_r1_8b8d332c/capture.pcap
+root        3127  0.0  0.2  13400  4588 pts/0    S+   04:30   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/latency_openvpn_ubuntu_20260328T043015009045Z_r1_8b8d332c/capture.pcap
+root        3134  0.0  0.0  13400  1808 pts/3    Ss   04:30   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/latency_openvpn_ubuntu_20260328T043015009045Z_r1_8b8d332c/capture.pcap
+tcpdump     3135  1.8  0.3  16228  7228 pts/3    S+   04:30   0:06 tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/latency_openvpn_ubuntu_20260328T043015009045Z_r1_8b8d332c/capture.pcap
+root        3164  0.4  0.2  13400  4580 pts/0    S+   04:35   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
+root        3166  0.0  0.0  13400   676 pts/2    Ss   04:35   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
+root        3167  0.8  0.4  12632  7976 pts/2    S+   04:35   0:00 openvpn --config /home/pi-client/pi-client.ovpn

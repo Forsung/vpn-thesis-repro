@@ -1,0 +1,14 @@
+root        1866  0.0  0.2  11504  5600 pts/1    S+   11:14   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T111356259532Z_r1_b519a3c1/capture.pcap
+root        1871  0.0  0.0  11504   884 pts/3    Ss   11:14   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T111356259532Z_r1_b519a3c1/capture.pcap
+tcpdump     1872  0.5  0.3  16476  7844 pts/3    S+   11:14   0:10 tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T111356259532Z_r1_b519a3c1/capture.pcap
+root        2328  0.0  0.2  11500  5652 pts/1    S+   11:26   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T112606263332Z_r2_8c71e0c3/capture.pcap
+root        2333  0.0  0.0  11500   880 pts/6    Ss   11:26   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T112606263332Z_r2_8c71e0c3/capture.pcap
+tcpdump     2335  0.5  0.3  16476  7960 pts/6    S+   11:26   0:06 tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T112606263332Z_r2_8c71e0c3/capture.pcap
+clientvm    2767  0.0  0.7  21816 14976 pts/1    S+   11:38   0:00 python3 /home/clientvm/vpn-thesis/scripts/test_system.py --stage mtu --vpn openvpn --server-ip 10.20.0.1 --iface enp0s3 --duration 60 --ping-count 50 --udp-bandwidth 50M --start-vpn --stop-vpn --clear-netem --measure-handshake --client-conf /home/clientvm/vm-client.ovpn --mtu 1400 --capture --repeat-id 3
+clientvm    2780  0.0  0.0   2892  1060 pts/1    S+   11:38   0:00 /bin/sh -c sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T113807351028Z_r3_242b7ba5/capture.pcap
+root        2782  0.0  0.2  11500  5808 pts/1    S+   11:38   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T113807351028Z_r3_242b7ba5/capture.pcap
+root        2785  0.0  0.0  11500   880 pts/9    Ss   11:38   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T113807351028Z_r3_242b7ba5/capture.pcap
+tcpdump     2786  0.4  0.4  16476  8096 pts/9    S+   11:38   0:01 tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T113807351028Z_r3_242b7ba5/capture.pcap
+root        2816  0.4  0.2  11500  5760 pts/1    S+   11:43   0:00 sudo openvpn --config /home/clientvm/vm-client.ovpn
+root        2818  0.0  0.0  11500   884 pts/10   Ss   11:43   0:00 sudo openvpn --config /home/clientvm/vm-client.ovpn
+root        2819  0.6  0.4  13508  9068 pts/10   S+   11:43   0:00 openvpn --config /home/clientvm/vm-client.ovpn

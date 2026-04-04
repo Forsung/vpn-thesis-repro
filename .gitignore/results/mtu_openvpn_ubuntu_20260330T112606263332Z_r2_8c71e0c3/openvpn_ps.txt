@@ -1,0 +1,11 @@
+root        1866  0.0  0.2  11504  5600 pts/1    S+   11:14   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T111356259532Z_r1_b519a3c1/capture.pcap
+root        1871  0.0  0.0  11504   884 pts/3    Ss   11:14   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T111356259532Z_r1_b519a3c1/capture.pcap
+tcpdump     1872  0.5  0.3  16476  7844 pts/3    S+   11:14   0:05 tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T111356259532Z_r1_b519a3c1/capture.pcap
+clientvm    2310  0.1  0.7  21788 14980 pts/1    S+   11:26   0:00 python3 /home/clientvm/vpn-thesis/scripts/test_system.py --stage mtu --vpn openvpn --server-ip 10.20.0.1 --iface enp0s3 --duration 60 --ping-count 50 --udp-bandwidth 50M --start-vpn --stop-vpn --clear-netem --measure-handshake --client-conf /home/clientvm/vm-client.ovpn --mtu 1400 --capture --repeat-id 2
+clientvm    2325  0.0  0.0   2892  1004 pts/1    S+   11:26   0:00 /bin/sh -c sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T112606263332Z_r2_8c71e0c3/capture.pcap
+root        2328  0.0  0.2  11500  5652 pts/1    S+   11:26   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T112606263332Z_r2_8c71e0c3/capture.pcap
+root        2333  0.0  0.0  11500   880 pts/6    Ss   11:26   0:00 sudo tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T112606263332Z_r2_8c71e0c3/capture.pcap
+tcpdump     2335  0.5  0.3  16476  7960 pts/6    S+   11:26   0:01 tcpdump -i enp0s3 -w /home/clientvm/vpn-thesis/results/mtu_openvpn_ubuntu_20260330T112606263332Z_r2_8c71e0c3/capture.pcap
+root        2359  0.2  0.2  11504  5652 pts/1    S+   11:31   0:00 sudo openvpn --config /home/clientvm/vm-client.ovpn
+root        2362  0.0  0.0  11504   884 pts/7    Ss   11:31   0:00 sudo openvpn --config /home/clientvm/vm-client.ovpn
+root        2363  0.4  0.4  13508  9020 pts/7    S+   11:31   0:00 openvpn --config /home/clientvm/vm-client.ovpn

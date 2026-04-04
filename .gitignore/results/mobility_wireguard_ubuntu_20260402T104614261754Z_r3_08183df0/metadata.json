@@ -1,0 +1,23 @@
+{
+  "run_id": "mobility_wireguard_ubuntu_20260402T104614261754Z_r3_08183df0",
+  "stage": "mobility",
+  "timestamp_utc": "20260402T104939394679Z",
+  "host": "ubuntu",
+  "vpn": "wireguard",
+  "server_ip": "10.10.0.1",
+  "duration_sec": 60,
+  "ping_count": 50,
+  "udp_bandwidth": "50M",
+  "iface": "enp0s3",
+  "delay_ms": null,
+  "loss_pct": null,
+  "mtu": 1500,
+  "repeat": "3",
+  "cpu_stress": false,
+  "capture": true,
+  "start_vpn": true,
+  "stop_vpn": true,
+  "measure_handshake": true,
+  "measure_reconnect": true,
+  "client_conf": null
+}

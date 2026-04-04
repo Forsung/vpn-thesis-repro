@@ -1,0 +1,23 @@
+{
+  "run_id": "cpu_stress_openvpn_ubuntu_20260330T121525372714Z_r3_b7439e61",
+  "stage": "cpu_stress",
+  "timestamp_utc": "20260330T122104816782Z",
+  "host": "ubuntu",
+  "vpn": "openvpn",
+  "server_ip": "10.20.0.1",
+  "duration_sec": 60,
+  "ping_count": 50,
+  "udp_bandwidth": "50M",
+  "iface": "eth0",
+  "delay_ms": null,
+  "loss_pct": null,
+  "mtu": 1500,
+  "repeat": "3",
+  "cpu_stress": true,
+  "capture": true,
+  "start_vpn": true,
+  "stop_vpn": true,
+  "measure_handshake": true,
+  "measure_reconnect": false,
+  "client_conf": "/home/pi-client/pi-client.ovpn"
+}

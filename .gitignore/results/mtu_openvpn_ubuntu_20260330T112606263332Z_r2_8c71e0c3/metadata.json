@@ -1,0 +1,23 @@
+{
+  "run_id": "mtu_openvpn_ubuntu_20260330T112606263332Z_r2_8c71e0c3",
+  "stage": "mtu",
+  "timestamp_utc": "20260330T113138175616Z",
+  "host": "ubuntu",
+  "vpn": "openvpn",
+  "server_ip": "10.20.0.1",
+  "duration_sec": 60,
+  "ping_count": 50,
+  "udp_bandwidth": "50M",
+  "iface": "enp0s3",
+  "delay_ms": null,
+  "loss_pct": null,
+  "mtu": 1400,
+  "repeat": "2",
+  "cpu_stress": false,
+  "capture": true,
+  "start_vpn": true,
+  "stop_vpn": true,
+  "measure_handshake": true,
+  "measure_reconnect": false,
+  "client_conf": "/home/clientvm/vm-client.ovpn"
+}

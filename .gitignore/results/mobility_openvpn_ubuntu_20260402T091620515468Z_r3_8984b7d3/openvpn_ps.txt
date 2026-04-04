@@ -1,0 +1,14 @@
+root       18873  0.0  0.2  13400  4592 pts/0    S+   09:05   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mobility_openvpn_ubuntu_20260402T090501214221Z_r1_20ffc6f0/capture.pcap
+root       18880  0.0  0.0  13400  1804 pts/2    Ss   09:05   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mobility_openvpn_ubuntu_20260402T090501214221Z_r1_20ffc6f0/capture.pcap
+tcpdump    18881  1.9  0.3  16228  7256 pts/2    S+   09:05   0:20 tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mobility_openvpn_ubuntu_20260402T090501214221Z_r1_20ffc6f0/capture.pcap
+root       18984  0.0  0.2  13400  4572 pts/0    S+   09:10   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mobility_openvpn_ubuntu_20260402T091040483710Z_r2_b4d297e3/capture.pcap
+root       18991  0.0  0.0  13400   676 pts/3    Ss   09:10   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mobility_openvpn_ubuntu_20260402T091040483710Z_r2_b4d297e3/capture.pcap
+tcpdump    18992  2.0  0.3  16228  7252 pts/3    S+   09:10   0:13 tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mobility_openvpn_ubuntu_20260402T091040483710Z_r2_b4d297e3/capture.pcap
+pi-clie+   19081  0.0  0.7  21752 13604 pts/0    S+   09:16   0:00 python3 /home/pi-client/vpn-thesis/scripts/test_system.py --stage mobility --vpn openvpn --server-ip 10.20.0.1 --iface eth0 --duration 60 --ping-count 50 --udp-bandwidth 50M --start-vpn --stop-vpn --clear-netem --measure-handshake --client-conf /home/pi-client/pi-client.ovpn --mtu 1500 --capture --measure-reconnect --repeat-id 3
+pi-clie+   19095  0.0  0.0   2328   828 pts/0    S+   09:16   0:00 /bin/sh -c sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mobility_openvpn_ubuntu_20260402T091620515468Z_r3_8984b7d3/capture.pcap
+root       19097  0.0  0.2  13400  4584 pts/0    S+   09:16   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mobility_openvpn_ubuntu_20260402T091620515468Z_r3_8984b7d3/capture.pcap
+root       19104  0.0  0.0  13400  1804 pts/4    Ss   09:16   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mobility_openvpn_ubuntu_20260402T091620515468Z_r3_8984b7d3/capture.pcap
+tcpdump    19105  2.1  0.3  16228  7252 pts/4    S+   09:16   0:06 tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/mobility_openvpn_ubuntu_20260402T091620515468Z_r3_8984b7d3/capture.pcap
+root       19151  0.4  0.2  13400  4596 pts/0    S+   09:21   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
+root       19153  0.0  0.0  13400   676 pts/1    Ss   09:21   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
+root       19154  0.8  0.4  12632  8044 pts/1    S+   09:21   0:00 openvpn --config /home/pi-client/pi-client.ovpn
