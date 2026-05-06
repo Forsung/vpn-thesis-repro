@@ -1,166 +1,109 @@
 # VPN Thesis – Reproducibility Repository
 
-Master's thesis project: Performance and Security Evaluation of WireGuard, OpenVPN and IPsec as Enterprise Remote Access Solutions
+Master's thesis project: **Performance and Security Evaluation of WireGuard, OpenVPN and IPsec as Enterprise Remote Access Solutions**.
 
-&#x20;
+This repository contains the scripts, configuration templates, and analysis tools used to reproduce the thesis experiments. The testbed compares **WireGuard**, **OpenVPN**, and **IPsec (strongSwan)** across multiple client platforms and access-network conditions.
 
-This repository contains the scripts, configuration templates, and analysis tools used for a master’s thesis comparing \*\*WireGuard\*\*, \*\*OpenVPN\*\*, and \*\*IPsec (strongSwan)\*\* as enterprise remote access VPN solutions.
+## What is evaluated
 
+The thesis measures:
 
+- throughput
+- latency / RTT
+- jitter
+- packet loss
+- CPU and memory usage
+- handshake time
+- reconnect time
+- MTU / fragmentation behavior
+- mobility behavior
+- throughput-per-CPU efficiency
+- security-relevant cryptographic design and packet protection
 
-## Metrics
+## Testbed summary
 
-The work evaluates:
+The experimental environment uses:
 
-\- throughput
+- a **CSC cPouta VPS** as the public VPN gateway
+- a **VirtualBox Ubuntu VM (x86)** as one client
+- a **Raspberry Pi 4 (ARM)** as another client
+- a **WSL client** on the orchestrator laptop
+- a **consumer TP-Link dual-band router** for NAT and Wi‑Fi variability
 
-\- latency / RTT
+The main comparison uses the **5 GHz** band. A separate baseline comparison is run on **2.4 GHz**.
 
-\- jitter
+## Repository contents
 
-\- packet loss
+- `scripts/`  
+  Automation scripts for running the staged experiment matrix and collecting results.
 
-\- CPU and memory usage
+- `configs/`  
+  Sanitized configuration templates for WireGuard, OpenVPN, and IPsec.
 
-\- handshake time
+- `analysis scripts/`  
+  Python scripts for extracting, aggregating, and plotting results.
 
-\- reconnect time
+- `results/`  
+  Raw run folders produced by the staged experiments.
 
-\- MTU / fragmentation behavior
+- `analysis/outputs/` and `analysis/figures_boxplots/`  
+  Extracted CSV outputs and generated thesis figures.
 
-\- mobility behavior
+## Experimental stages
 
-\- throughput-per-CPU efficiency
+The staged matrix includes:
 
+- Baseline
+- Latency
+- Packet loss
+- MTU variation
+- CPU stress
+- Mobility / reconnect
 
+Each run produces a separate output folder containing:
 
-\## Testbed summary
+- `metadata.json`
+- `ping.log`
+- `iperf_tcp.json`
+- `iperf_udp.json`
+- `cpu.json`
+- protocol state snapshots (`wg_show.txt`, `openvpn_status.txt`, `ipsec_status.txt`)
+- `handshake_ms.txt`
+- `reconnect_ms.txt`
+- optional `capture.pcap` (I commented out capture.pcap in the test_run.py script due to lack of storage)
 
+## Reproducibility workflow
 
+1. Prepare the server and clients.
+2. Install VPN software and measurement tools.
+3. Run the staged matrix scripts.
+4. Extract results into CSV format.
+5. Aggregate the measurements if needed.
+6. Generate thesis figures from the outputs.
 
-The testbed uses:
+## Security evaluation note
 
-\- a \*\*CSC cPouta VPS\*\* as the VPN server
+The thesis discussion includes a security-evaluation subsection focused on the cryptographic design of WireGuard, OpenVPN, and IPsec: key exchange, cipher selection, and packet protection.
 
-\- a \*\*VirtualBox Ubuntu VM\*\* as one client
+## Notes
 
-\- a \*\*Raspberry Pi 4\*\* as another client
+- This repository contains **sanitized** templates only.
+- Private keys, secrets, and large raw measurement archives are excluded from version control.
 
-\- a \*\*consumer TP-Link router\*\* for NAT and wireless access
+## Example usage
 
+```bash
+./scripts/run_staged_matrix.sh vm 5GHz all
+./scripts/run_staged_matrix.sh pi 2.4GHz mobility
+python3 "analysis scripts/extract_results.py"
+python3 "analysis scripts/plot_results.py"
+```
 
-
-\## Repository contents
-
-
-
-\- `scripts/`  
-
-&#x20; Automation scripts for running the staged experiment matrix and collecting results.
-
-
-
-\- `configs/`  
-
-&#x20; Sanitized configuration templates for WireGuard, OpenVPN, and IPsec.
-
-
-
-\- `analysis scripts/`  
-
-&#x20; Python scripts for extracting, aggregating, and plotting results.
-
-
-
-\- `README.md`  
-
-&#x20; Reproducibility instructions and repository overview.
-
-
-
-\## Experimental stages
-
-
-
-The measurement plan includes:
-
-\- Baseline
-
-\- Latency
-
-\- Packet loss
-
-\- MTU variation
-
-\- CPU stress
-
-\- Mobility / reconnect
-
-
-
-Each run creates a unique output folder containing:
-
-\- `metadata.json`
-
-\- `ping.log`
-
-\- `iperf\_tcp.json`
-
-\- `iperf\_udp.json`
-
-\- `cpu.json`
-
-\- `capture.pcap`
-
-\- `handshake\_ms.txt`
-
-\- `reconnect\_ms.txt`
-
-\- protocol state snapshots
-
-
-
-\## Reproducibility workflow
-
-
-
-1\. Prepare the server and clients.
-
-2\. Install VPN software and measurement tools.
-
-3\. Run the staged matrix scripts.
-
-4\. Extract results into CSV format.
-
-5\. Aggregate the measurements.
-
-6\. Generate thesis figures from the outputs.
-
-
-
-\## Notes
-
-
-
-\- This repository contains \*\*sanitized\*\* templates only.
-
-\- Private keys, secrets, and large raw measurement archives are excluded.
-
-\- Large raw outputs should be stored separately from the Git repository.
-
-
-
-\## Expected usage
-
-
+## Expected usage
 
 The repository is intended to support:
 
-\- thesis reproducibility
-
-\- experiment reruns
-
-\- result verification
-
-\- future extension of the methodology
-
+1. Thesis reproducibility
+2. Experiment reruns
+3. Result verification
+4. Future extension of the methodology

@@ -1,8 +1,0 @@
-pi-clie+   10696  0.0  0.7  21824 13552 pts/0    S+   11:57   0:00 python3 /home/pi-client/vpn-thesis/scripts/test_system.py --stage cpu_stress --vpn openvpn --server-ip 10.20.0.1 --iface eth0 --duration 60 --ping-count 50 --udp-bandwidth 50M --start-vpn --stop-vpn --clear-netem --measure-handshake --client-conf /home/pi-client/pi-client.ovpn --mtu 1500 --capture --cpu-stress --repeat-id 1
-pi-clie+   10709  0.0  0.0   2328   832 pts/0    S+   11:57   0:00 /bin/sh -c sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/cpu_stress_openvpn_ubuntu_20260330T115750235422Z_r1_cec8a2dc/capture.pcap
-root       10711  0.0  0.2  13400  4580 pts/0    S+   11:57   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/cpu_stress_openvpn_ubuntu_20260330T115750235422Z_r1_cec8a2dc/capture.pcap
-root       10719  0.0  0.0  13400  1804 pts/3    Ss   11:57   0:00 sudo tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/cpu_stress_openvpn_ubuntu_20260330T115750235422Z_r1_cec8a2dc/capture.pcap
-tcpdump    10721  1.9  0.3  16228  7248 pts/3    S+   11:57   0:06 tcpdump -i eth0 -w /home/pi-client/vpn-thesis/results/cpu_stress_openvpn_ubuntu_20260330T115750235422Z_r1_cec8a2dc/capture.pcap
-root       10754  0.4  0.2  13400  4576 pts/0    S+   12:03   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
-root       10756  0.0  0.0  13400   680 pts/4    Ss   12:03   0:00 sudo openvpn --config /home/pi-client/pi-client.ovpn
-root       10757  0.6  0.4  12632  7992 pts/4    S+   12:03   0:00 openvpn --config /home/pi-client/pi-client.ovpn
