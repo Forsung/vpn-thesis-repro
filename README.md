@@ -2,7 +2,7 @@
 
 Master's thesis project: **Performance and Security Evaluation of WireGuard, OpenVPN and IPsec as Enterprise Remote Access Solutions**.
 
-This repository contains the scripts, configuration templates, and analysis tools used to reproduce the thesis experiments. The testbed compares **WireGuard**, **OpenVPN**, and **IPsec (strongSwan)** across multiple client platforms and access-network conditions.
+This repository contains the scripts, configuration templates, and analysis tools used in the thesis experiments. The testbed compares **WireGuard**, **OpenVPN**, and **IPsec (strongSwan)** across multiple client platforms and access-network conditions.
 
 ## What is evaluated
 
@@ -41,13 +41,14 @@ The main comparison uses the **5 GHz** band. A separate baseline comparison is r
   Sanitized configuration templates for WireGuard, OpenVPN, and IPsec.
 
 - `analysis scripts/`  
-  Python scripts for extracting, aggregating, and plotting results.
+  Python scripts for extracting and plotting results.
 
-- `results/`  
-  Raw run folders produced by the staged experiments.
+- `.gitignore/`  
+   - analysis: Figures (boxplot figures after plot script) and output (CSV result file after extraction sctipt run)
+   - results: Raw run folders produced by the staged experiments script.
 
-- `analysis/outputs/` and `analysis/figures_boxplots/`  
-  Extracted CSV outputs and generated thesis figures.
+- `setup guide/`  
+  Commands used for each testbed device.
 
 ## Experimental stages
 
@@ -70,7 +71,7 @@ Each run produces a separate output folder containing:
 - protocol state snapshots (`wg_show.txt`, `openvpn_status.txt`, `ipsec_status.txt`)
 - `handshake_ms.txt`
 - `reconnect_ms.txt`
-- optional `capture.pcap` (I commented out capture.pcap in the test_run.py script due to lack of storage)
+- optional `capture.pcap` (I commented out capture.pcap in the test_run.py script due to lack of storage during capture so uncomment if needed when reproducing)
 
 ## Reproducibility workflow
 
