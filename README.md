@@ -97,7 +97,7 @@ The thesis discussion includes a security-evaluation subsection focused on the c
 ./scripts/run_staged_matrix.sh vm 5GHz all
 ./scripts/run_staged_matrix.sh pi 2.4GHz mobility
 python3 "analysis scripts/extract_results.py"
-python3 "analysis scripts/plot_results.py"
+python3 "analysis scripts/plot_results_boxplots.py"
 ```
 
 ## Expected usage
